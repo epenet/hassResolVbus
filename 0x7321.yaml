@@ -1,0 +1,153 @@
+message: aa1000217310000112385d000000041e0c001501015c5b012801007a25013822047b7c03382204223822382205465d020000011f00000000007f00000000007f000e000001703b000000004400000000007f00000000007f00000000007f00002d00005200000000007f01034503042f02000000007d
+name: Vitosolic
+attributes:
+    - name: Temperature Sensor 1
+      offset: 0
+      size: 2
+      factor: 0.1
+      format: temperature
+    - name: Temperature Sensor 2
+      offset: 2
+      size: 2
+      factor: 0.1
+      format: temperature
+    - name: Temperature Sensor 3
+      offset: 4
+      size: 2
+      factor: 0.1
+      format: temperature
+    - name: Temperature Sensor 4
+      offset: 6
+      size: 2
+      factor: 0.1
+      format: temperature
+    - name: Temperature Sensor 5
+      offset: 8
+      size: 2
+      factor: 0.1
+      format: temperature
+    - name: Temperature Sensor 6
+      offset: 10
+      size: 2
+      factor: 0.1
+      format: temperature
+    - name: Temperature Sensor 7
+      offset: 12
+      size: 2
+      factor: 0.1
+      format: temperature
+    - name: Temperature Sensor 8
+      offset: 14
+      size: 2
+      factor: 0.1
+      format: temperature
+    - name: Temperature Sensor 9
+      offset: 16
+      size: 2
+      factor: 0.1
+      format: temperature
+    - name: Temperature Sensor 10
+      offset: 18
+      size: 2
+      factor: 0.1
+      format: temperature
+    - name: Temperature Sensor 11
+      offset: 20
+      size: 2
+      factor: 0.1
+      format: temperature
+    - name: Temperature Sensor 12
+      offset: 22
+      size: 2
+      factor: 0.1
+      format: temperature
+    - name: Irradiation
+      offset: 24
+      size: 2
+      factor: 1 
+    - name: Impulse input 1
+      offset: 28
+      size: 4
+      factor: 1
+    - name: Impulse input 2
+      offset: 32
+      size: 4
+      factor: 1
+    - name: Sensor line break mask
+      offset: 36
+      size: 2
+      factor: 1 
+    - name: Sensor short-circuit mask
+      offset: 38
+      size: 2
+      factor: 1 
+    - name: Sensor usage mask
+      offset: 40
+      size: 2
+      factor: 1 
+    - name: Pump speed relay 1
+      offset: 44
+      size: 1
+      factor: 1
+      unit: '%'
+    - name: Pump speed relay 2
+      offset: 45
+      size: 1
+      factor: 1
+      unit: '%'
+    - name: Pump speed relay 3
+      offset: 46
+      size: 1
+      factor: 1
+      unit: '%'
+    - name: Pump speed relay 4
+      offset: 47
+      size: 1
+      factor: 1
+      unit: '%'
+    - name: Pump speed relay 5
+      offset: 48
+      size: 1
+      factor: 1
+      unit: '%'
+    - name: Pump speed relay 6
+      offset: 49
+      size: 1
+      factor: 1
+      unit: '%'
+    - name: Pump speed relay 7
+      offset: 50
+      size: 1
+      factor: 1
+      unit: '%'
+    - name: Pump speed relay 8
+      offset: 51
+      size: 1
+      factor: 1
+      unit: '%'
+    - name: Pump speed relay 9
+      offset: 52
+      size: 1
+      factor: 1
+      unit: '%'
+    - name: Relay usage mask
+      offset: 58
+      size: 2
+      factor: 1 
+    - name: Error mask
+      offset: 60
+      size: 2
+      factor: 1 
+    - name: Warning mask
+      offset: 62
+      size: 2
+      factor: 1 
+    - name: Controller version
+      offset: 64
+      size: 2
+      factor: 1
+    - name: System time
+      offset: 66
+      lenth: 2
+      factor: 1
+      format: time
