@@ -23,7 +23,10 @@ In your configuration.yaml, you will need to add a sensor, and set the correspon
 sensor:
   - platform: resolvbus
     name: MyResol
-    tty: '/dev/ttyUSB0'
+    ttyPort: /dev/ttyUSB0
+    filterSource: 0x7321
+    filterDestination: 0x0010
+    filterCommand: 0x0100
     attributes:
       - name: temperature_sensor_1
         offset: 0
