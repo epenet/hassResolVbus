@@ -46,13 +46,15 @@ sensor:
   - platform: template
     sensors:
       myresol_temperature1:
-        value_template: '{{ states.sensor.myresol.attributes["temperature_sensor_1"] | float }}'
+        value_template: '{{ state_attr("sensor.myresol" , "temperature_sensor_1") }}'
         friendly_name: "Temperature 1"
+        unit_of_measurement: '°C'
   - platform: template
     sensors:
       myresol1_pump1:
-        value_template: '{{ states.sensor.myresol.attributes["pump_speed_relay_1"] | int }}'
+        value_template: '{{ state_attr("sensor.myresol" , "pump_speed_relay_1") }}'
         friendly_name: "Pump 1"
+        unit_of_measurement: '%'
 ```
 
 ## Logging
