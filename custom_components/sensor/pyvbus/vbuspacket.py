@@ -161,8 +161,8 @@ class VBUSPacket(object):
                 'Data frame checksum invalid: expected %s got %s' % (
                     self._buffer[source_offset+5],
                     frame_checksum
+                    )
                 )
-            )
 
         self.vbus_injectseptett(source_offset, 4)
 
@@ -172,6 +172,14 @@ class VBUSPacket(object):
     def GetRawValue(self, offset, size):
         bit_size = size * 8
         value = 0
+
+        if len(self._allframes) < (offset + size):
+            raise VBUSPacketException(
+                'Invalid offset (%s) and size (%s)' % (
+                    offset,
+                    size
+                    )
+                )
 
         for i in range(size):
             value += self._allframes[(offset+i)] << (8*i)
