@@ -76,6 +76,11 @@ class ResolVbusSensor(Entity):
         """Return the state of the sensor."""
         return self._state
 
+    @property
+    def device_state_attributes(self):
+        """Return the device state attributes."""
+        return self._attrs
+
     def process_packet(self, vbusPacket):
         """Update new state data for the sensor."""
         for item in self._attrsdef:
@@ -143,8 +148,3 @@ class ResolVbusSensor(Entity):
                             return buffer[0:len(buffer)-1]
         finally:
             writer.close()
-
-    @property
-    def device_state_attributes(self):
-        """Return the device state attributes."""
-        return self._attrs
