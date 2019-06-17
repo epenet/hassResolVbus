@@ -12,9 +12,11 @@ To install the component, you will need to copy resolvbus.py and vbuspacket.py t
 ```
  - .homeassistant
  | - custom_components
- | | - sensor
- | | | - resolvbus.py
+ | | - resolvbus
+ | | | - __init__.py
+ | | | - sensor.py
  | | | - pyvbus
+ | | | | - __init__.py
  | | | | - vbuspacket.py
 ```
 
