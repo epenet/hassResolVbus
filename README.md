@@ -8,7 +8,7 @@ However, since each device has separate attributes, these need to be specified i
 ## Getting started
 Please check the [Resol Specification](https://github.com/epenet/pyvbus/blob/master/documentation/VBus%20Protocol%20Specification%20-%20English%202011-01-27.pdf) to find your device and corresponding attributes.
 
-To install the component, you will need to copy resolvbus.py and vbuspacket.py to you local configuration folder:
+To install the component, you will need to copy the four py files to you local configuration folder:
 ```
  - .homeassistant
  | - custom_components
