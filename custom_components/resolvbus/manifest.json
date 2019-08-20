@@ -1,0 +1,8 @@
+{
+  "domain": "resolvbus",
+  "name": "Resol VBUS",
+  "documentation": "https://github.com/epenet/hassResolVbus",
+  "dependencies": [],
+  "codeowners": ["@epenet"],
+  "requirements": ["pyserial-asyncio==0.4"]
+}
