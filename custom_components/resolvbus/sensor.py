@@ -126,7 +126,7 @@ class ResolVbusSensor(Entity):
             elif self._ttyPort is not None:
                 buffer = await self.async_readFromSerial(self._ttyPort, self._filterSource, self._filterDestination, self._filterCommand)
                 self.process_buffer(buffer)
-        except VBUSPacketException as e:
+        except Exception as e:
             _LOGGER.error("Update failed: %s" % e)
 
     async def async_readFromSerial(self, port, source=None, destination=None, command=None):
