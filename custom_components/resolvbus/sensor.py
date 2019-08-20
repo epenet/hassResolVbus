@@ -26,9 +26,11 @@ SCAN_INTERVAL = timedelta(seconds=60)
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Required(CONF_NAME): cv.string,
-    vol.Optional(CONF_NAME): cv.string,
-    vol.Required(CONF_NAME): cv.string,
-    vol.Required(CONF_NAME): cv.string,
+    vol.Optional('ttyPort'): cv.string,
+    vol.Optional('filterSource'): cv.string,
+    vol.Optional('filterDestination'): cv.string,
+    vol.Optional('filterCommand'): cv.string,
+    vol.Optional('attributes'): vol.All(cv.ensure_list),
 })
 
 
