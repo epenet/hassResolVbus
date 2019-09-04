@@ -26,9 +26,11 @@ SCAN_INTERVAL = timedelta(seconds=60)
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Required(CONF_NAME): cv.string,
-    vol.Optional(CONF_NAME): cv.string,
-    vol.Required(CONF_NAME): cv.string,
-    vol.Required(CONF_NAME): cv.string,
+    vol.Optional('ttyPort'): cv.string,
+    vol.Optional('filterSource'): cv.string,
+    vol.Optional('filterDestination'): cv.string,
+    vol.Optional('filterCommand'): cv.string,
+    vol.Optional('attributes'): vol.All(cv.ensure_list),
 })
 
 
@@ -124,7 +126,7 @@ class ResolVbusSensor(Entity):
             elif self._ttyPort is not None:
                 buffer = await self.async_readFromSerial(self._ttyPort, self._filterSource, self._filterDestination, self._filterCommand)
                 self.process_buffer(buffer)
-        except VBUSPacketException as e:
+        except Exception as e:
             _LOGGER.error("Update failed: %s" % e)
 
     async def async_readFromSerial(self, port, source=None, destination=None, command=None):
